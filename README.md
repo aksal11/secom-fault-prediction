@@ -77,42 +77,9 @@ Differences between most of these rows are within the fold-to-fold noise (about 
 - Gradient boosting was not evaluated (the run was too slow in my setup).
 - Hyperparameters were only lightly explored, and median imputation was the only imputation method tried.
 
-## Possible next steps
-
-- Compare KNN imputation with median imputation
-- Inspect which sensors the model relies on (feature importances or SHAP)
-- Compare results with published SECOM papers
-- Test methods that account for process drift
-
-## Repository structure
-
-```
-secom-fault-prediction/
-├── data/                      (not included; download from UCI)
-├── notebooks/
-│   ├── 01_eda.ipynb
-│   ├── 02_preprocessing.ipynb
-│   ├── 03_baseline.ipynb
-│   ├── 04_imbalance.ipynb
-│   ├── 05_models_cv.ipynb
-│   ├── 06_diagnostics.ipynb
-│   └── 07_final_evaluation.ipynb
-├── requirements.txt
-└── README.md
-```
-
-## How to run
-
-```bash
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-jupyter notebook
-```
-
-Download the data into `data/`, then run the notebooks in order.
 
 ## Tools
 
 Python, pandas, NumPy, scikit-learn, imbalanced-learn, SciPy, Jupyter.
+
 
